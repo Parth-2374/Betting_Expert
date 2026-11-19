@@ -1,0 +1,338 @@
+/* =========================
+   ASIDE
+   ========================= */
+
+   .aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 248px;
+    height: 100vh;
+
+    background-color: #031322;
+
+    padding: 14px 13px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 1000;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.aside-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 3px 7px 17px;
+}
+
+.aside-logo-icon {
+    width: 36px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.aside-logo-icon i {
+    font-size: 31px;
+    color: #25d14e;
+}
+
+.aside-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-brand-name {
+    display: flex;
+    align-items: baseline;
+
+    white-space: nowrap;
+}
+
+.aside-bet {
+    color: #ffffff;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.aside-exp {
+    color: #25d14e;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.aside-logo-text small {
+    margin-top: 1px;
+
+    color: #9caab8;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+.aside-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+/* =========================
+   MENU ITEM
+   ========================= */
+
+.aside-item {
+    position: relative;
+
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 12px;
+
+    color: #f3f6f9;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    box-sizing: border-box;
+
+    transition: all 0.2s ease;
+}
+
+.aside-item i {
+    width: 18px;
+
+    text-align: center;
+
+    color: #cbd5df;
+
+    font-size: 15px;
+
+    flex-shrink: 0;
+}
+
+.aside-item span:not(.hot-badge) {
+    white-space: nowrap;
+}
+
+
+/* =========================
+   HOVER
+   ========================= */
+
+.aside-item:hover {
+    background-color: #0c263b;
+    color: #ffffff;
+}
+
+.aside-item:hover i {
+    color: #25d14e;
+}
+
+
+/* =========================
+   ACTIVE
+   ========================= */
+
+.aside-item.active {
+    background-color: #11483f;
+
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+.aside-item.active::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background-color: #25d14e;
+
+    border-radius: 8px 0 0 8px;
+}
+
+.aside-item.active i {
+    color: #ffffff;
+}
+
+
+/* =========================
+   HOT BADGE
+   ========================= */
+
+.hot-badge {
+    margin-left: auto;
+
+    padding: 3px 7px;
+
+    background-color: #ff3347;
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    font-size: 9px !important;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   DIVIDER
+   ========================= */
+
+.aside-divider {
+    width: calc(100% - 14px);
+    height: 1px;
+
+    background-color: #294157;
+
+    margin: 7px auto;
+}
+
+
+/* =========================
+   COMMUNITY BOX
+   ========================= */
+
+.community-box {
+    margin: 13px 6px 5px;
+
+    padding: 14px;
+
+    background-color: rgba(7, 26, 42, 0.85);
+
+    border: 1px solid #294157;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+.community-box h6 {
+    margin: 0 0 9px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.community-box p {
+    margin: 0 0 14px;
+
+    color: #d4dce5;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.community-box button {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #20c947;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.community-box button:hover {
+    background-color: #1dae3d;
+}
+
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+.aside::-webkit-scrollbar {
+    width: 5px;
+}
+
+.aside::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.aside::-webkit-scrollbar-thumb {
+    background-color: #294157;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 991px) {
+
+    .aside {
+        width: 230px;
+        left: -230px;
+
+        transition: left 0.3s ease;
+    }
+
+    .aside.show {
+        left: 0;
+    }
+}
